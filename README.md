@@ -14,6 +14,12 @@ The method is described in [Pillosu et al. (2026), *Outrunning flash floods*](ht
 
 > **Scope:** this implementation generates historical daily estimates from prepared input files. It does not retrieve or downscale rainfall, train the model, or implement a forecast-cycle interface. Dataset and forecast downloads are not yet published through this repository.
 
+## Website
+
+[Open the Atlas historical archive](https://fatimapillosu.github.io/probability_flash_flood/) to explore maps, location profiles and downloads. The current interface uses demonstration data; it is not connected to model outputs.
+
+The `main` branch contains both the inference software and the static website source. GitHub Pages publishes the root of the `website` branch. See the [website guide](WEBSITE.md) for local preview, data integration and publication instructions.
+
 ## What the probability represents
 
 The output is an occurrence probability in percent, from 0 to 100, for each native input grid box and day. It is not a prediction of water depth, discharge, inundation extent or an individual property's flood probability. The method uses the ERA5 N320 grid, approximately 31 km; the script preserves the input grid and point order.
