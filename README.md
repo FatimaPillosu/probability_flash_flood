@@ -1,5 +1,7 @@
 # Probability of Flash Flood — Atlas
 
+<p><img src="poff-logo.png" alt="Probability of Flash Flood (PoFF)" width="640"></p>
+
 A static, map-led archive explorer for PoFF. This first release uses a
 deterministic synthetic dataset to demonstrate the interface. It is not model
 output or observed historical flood occurrence. The interface uses a discreet
@@ -18,6 +20,7 @@ Open http://localhost:8765. No package installation or build is required.
 ## Files
 
 - `index.html`: semantic page structure and metadata.
+- `poff-logo.png`: approved teal logo, shared with the scientific repository.
 - `atlas.css`: Atlas layout, responsive styles and appearance.
 - `atlas.js`: data generation, map projection, place lookup, charts, statistics,
   context overlays, state persistence and exports.

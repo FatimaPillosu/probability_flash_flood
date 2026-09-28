@@ -3,6 +3,7 @@
 !/.gitignore
 !/.nojekyll
 !/index.html
+!/poff-logo.png
 !/atlas.css
 !/atlas.js
 !/d3.min.js
