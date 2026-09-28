@@ -1,6 +1,6 @@
 # Probability of Flash Flood — Atlas
 
-<p><img src="poff-logo.png" alt="Probability of Flash Flood (PoFF)" width="640"></p>
+<p><img src="https://raw.githubusercontent.com/FatimaPillosu/probability_flash_flood/main/poff-logo.png" alt="Probability of Flash Flood (PoFF)" width="640"></p>
 
 A static, map-led archive explorer for PoFF. This first release uses a
 deterministic synthetic dataset to demonstrate the interface. It is not model
