@@ -1,0 +1,33 @@
+{
+  "root": ".",
+  "model": "{root}/model.joblib",
+  "model_label": "XGBoost BCE AUC-ROC full CONUS",
+  "output": "{root}/outputs/{end:%Y}/poff_{end:%Y%m%d}_00.nc",
+  "batch_size": 100000,
+  "threads": 4,
+  "percentile_count": 99,
+  "rainfall_scale_to_mm": 1.0,
+  "climatology_scale_to_mm": 1.0,
+  "output_metadata": {
+    "license": "https://creativecommons.org/licenses/by/4.0/",
+    "creator_name": "Fatima M. Pillosu",
+    "creator_url": "https://orcid.org/0000-0001-8127-0990",
+    "attribution": "Flash-flood probability data: Fatima M. Pillosu / PoFF. Method: Pillosu et al. (2026), https://doi.org/10.5194/egusphere-2026-1591."
+  },
+  "inputs": {
+    "sdfor": "{root}/inputs/static/sdfor.grib",
+    "land_sea_mask": "{root}/inputs/static/land_sea_mask.grib",
+    "soil_type": "{root}/inputs/static/soil_type.grib",
+    "cover_low": "{root}/inputs/static/cover_low.grib",
+    "cover_high": "{root}/inputs/static/cover_high.grib",
+    "climatology": "{root}/inputs/climatology/rainfall_return_levels.grib",
+    "return_periods": "{root}/inputs/climatology/return_periods.npy",
+    "neighbourhoods": "{root}/inputs/static/neighbourhoods.npy",
+    "rainfall": "{root}/inputs/rainfall/{start:%Y}/rainfall_percentiles_{start:%Y%m%d}.grib",
+    "swvl1": "{root}/inputs/soil/{start:%Y}/swvl1_{start:%Y%m%d}_00.grib",
+    "swvl2": "{root}/inputs/soil/{start:%Y}/swvl2_{start:%Y%m%d}_00.grib",
+    "swvl3": "{root}/inputs/soil/{start:%Y}/swvl3_{start:%Y%m%d}_00.grib",
+    "lai_low": "{root}/inputs/lai/lai_low_{end:%m%d}.grib",
+    "lai_high": "{root}/inputs/lai/lai_high_{end:%m%d}.grib"
+  }
+}

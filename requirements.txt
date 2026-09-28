@@ -1,0 +1,9 @@
+# Use the Python/XGBoost/joblib versions compatible with your saved model.
+# Metview's native installation must also be available on PATH.
+numpy
+pandas
+joblib
+xgboost
+scikit-learn
+metview
+netCDF4

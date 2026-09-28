@@ -1,0 +1,22 @@
+Probability of Flash Floods (PoFF)
+Copyright 2026 Fatima M. Pillosu
+
+The Python software, example configuration and accompanying software
+documentation are licensed under the Apache License, Version 2.0.
+See LICENSE for the complete terms.
+
+Scientific method:
+Pillosu, F. M., Claire, M., Baugh, C., Pappenberger, F., Prudhome, C.,
+and Cloke, H. L. (2026). Outrunning flash floods: XGBoost and sparse
+impact reports deliver global medium-range probabilistic forecasts
+of flash flood occurrence. EGUsphere [preprint].
+https://doi.org/10.5194/egusphere-2026-1591
+
+Research implementation informing the numerical conventions:
+https://github.com/FatimaPillosu/probability_of_flash_flood
+Reference commit: 17e1b5f3764c67dbc75d22bf57e7a0fa6f5e7b04
+
+This attribution notice is informational and does not add conditions
+to the Apache License. Scholarly citation guidance is in CITATION.cff.
+Separately published PoFF data products have the terms in LICENSE-DATA
+when explicitly designated as CC BY 4.0; see DATA_ATTRIBUTION.md.

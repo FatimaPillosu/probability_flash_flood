@@ -1,0 +1,45 @@
+cff-version: 1.2.0
+message: >-
+  Please cite the method below when using this software or its model, and
+  record the software release or commit and model checksum used. Cite the
+  versioned dataset separately when using published estimates.
+type: software
+license: Apache-2.0
+repository-code: https://github.com/FatimaPillosu/probability_of_flash_flood_oper
+title: "Probability of Flash Floods (PoFF): ERA5-based inference"
+authors:
+  - family-names: Pillosu
+    given-names: Fatima M.
+    orcid: https://orcid.org/0000-0001-8127-0990
+abstract: >-
+  Standalone Python inference for daily flash-flood occurrence probabilities
+  from ERA5 and ERA5-ecPoint predictors using a saved XGBoost classifier.
+keywords:
+  - flash floods
+  - ERA5
+  - ecPoint
+  - XGBoost
+  - probabilistic prediction
+preferred-citation:
+  type: article
+  authors:
+    - family-names: Pillosu
+      given-names: Fatima M.
+    - family-names: Claire
+      given-names: Mariana
+    - family-names: Baugh
+      given-names: Calum
+    - family-names: Pappenberger
+      given-names: Florian
+    - family-names: Prudhome
+      given-names: Christel
+    - family-names: Cloke
+      given-names: Hannah L.
+  title: >-
+    Outrunning flash floods: XGBoost and sparse impact reports deliver global
+    medium-range probabilistic forecasts of flash flood occurrence
+  journal: EGUsphere
+  year: 2026
+  doi: 10.5194/egusphere-2026-1591
+  url: https://egusphere.copernicus.org/preprints/2026/egusphere-2026-1591/
+  notes: Preprint; citation follows the publisher's current metadata.
