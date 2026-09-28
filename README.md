@@ -75,7 +75,7 @@ or an external service; selected-point exports can be made in the browser.
 ## Publication
 
 Publish this directory's reviewed files at the root of the repository's
-`gh-pages` branch, then configure GitHub Pages to deploy from that branch's root.
+`website` branch, then configure GitHub Pages to deploy from that branch's root.
 The scientific software remains on `main`. No credentials or private workflow
 files belong in this branch. The page is marked `noindex` while it remains a
 demonstration; remove that tag when a validated production archive is connected.
