@@ -1,6 +1,6 @@
 <p>
   <a href="https://fatimapillosu.github.io/probability_flash_flood/">
-    <img src="poff-logo.png" alt="Probability of Flash Flood (PoFF)" width="640">
+    <img src="https://raw.githubusercontent.com/FatimaPillosu/probability_flash_flood/main/poff-logo.png" alt="Probability of Flash Flood (PoFF)" width="640">
   </a>
 </p>
 
