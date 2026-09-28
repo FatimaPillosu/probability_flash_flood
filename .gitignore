@@ -1,0 +1,12 @@
+# Publish only the reviewed static website and its licences/documentation.
+*
+!/.gitignore
+!/.nojekyll
+!/index.html
+!/atlas.css
+!/atlas.js
+!/d3.min.js
+!/README.md
+!/LICENSE
+!/LICENSE-DATA
+!/THIRD_PARTY_NOTICES.md
