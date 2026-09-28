@@ -5,8 +5,8 @@ message: >-
   versioned dataset separately when using published estimates.
 type: software
 license: Apache-2.0
-repository-code: https://github.com/FatimaPillosu/probability_of_flash_flood_oper
-title: "Probability of Flash Floods (PoFF): ERA5-based inference"
+repository-code: https://github.com/FatimaPillosu/probability_flash_flood
+title: "Probability of Flash Flood (PoFF): ERA5-based inference"
 authors:
   - family-names: Pillosu
     given-names: Fatima M.

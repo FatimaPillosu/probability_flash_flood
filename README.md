@@ -1,4 +1,4 @@
-# Probability of Flash Floods (PoFF)
+# Probability of Flash Flood (PoFF)
 
 Daily, ERA5-based estimates of flash-flood occurrence using a trained XGBoost model.
 
@@ -38,8 +38,8 @@ Use Python, XGBoost, scikit-learn and joblib versions compatible with the saved 
 Clone the repository, then install the Python packages within that compatible environment:
 
 ```bash
-git clone https://github.com/FatimaPillosu/probability_of_flash_flood_oper.git
-cd probability_of_flash_flood_oper
+git clone https://github.com/FatimaPillosu/probability_flash_flood.git
+cd probability_flash_flood
 python -m pip install -r requirements.txt
 ```
 

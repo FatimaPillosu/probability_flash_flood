@@ -480,7 +480,7 @@ def write_output(path, day, probabilities, latitude, longitude, metadata, overwr
             variable.valid_range = np.array([0, 100], dtype=np.float32)
             variable.comment = "Ocean and missing-rainfall points are missing; dry land is zero."
             variable[0, :] = probabilities
-            dataset.title = "ERA5-based historical probability of flash floods"
+            dataset.title = "ERA5-based historical Probability of Flash Flood (PoFF)"
             dataset.grid_description = "Native input grid and point order, without interpolation"
             dataset.time_coverage_start = day.strftime("%Y-%m-%dT00:00:00Z")
             dataset.time_coverage_end = (day + timedelta(days=1)).strftime("%Y-%m-%dT00:00:00Z")

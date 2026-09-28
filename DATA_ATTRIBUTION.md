@@ -20,7 +20,7 @@ licence, and its permissions cannot be withdrawn from compliant recipients.
 
 ## Suggested credit
 
-Attribution party: **Fatima M. Pillosu / Probability of Flash Floods (PoFF)**.
+Attribution party: **Fatima M. Pillosu / Probability of Flash Flood (PoFF)**.
 Author identifier: [ORCID 0000-0001-8127-0990](https://orcid.org/0000-0001-8127-0990).
 
 > Flash-flood probability data: Fatima M. Pillosu / PoFF, licensed under
