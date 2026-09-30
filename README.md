@@ -16,7 +16,7 @@ The method is described in [Pillosu et al. (2026), *Outrunning flash floods*](ht
 
 ## Website
 
-[Open the Atlas historical archive](https://fatimapillosu.github.io/probability_flash_flood/) to explore maps, location profiles and downloads. The current interface uses demonstration data; it is not connected to model outputs.
+[Open the Atlas historical archive](https://fatimapillosu.github.io/probability_flash_flood/) to explore maps of the archive. The site in this branch is a preview that shows the archive on its native grid; the first published day is 10 January 1950. Location profiles and data downloads return when their data are published.
 
 The `main` branch contains both the inference software and the static website source. GitHub Pages publishes the root of the `website` branch. See the [website guide](WEBSITE.md) for local preview, data integration and publication instructions.
 

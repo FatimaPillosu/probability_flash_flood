@@ -20,10 +20,12 @@ THIS SOFTWARE.
 
 ## Natural Earth geography
 
-Country boundaries originate from Natural Earth 1:50m Admin 0 Countries.
+Coastlines, country boundaries and lakes originate from Natural Earth 5.1.2,
+1:50m Admin 0 Countries and 1:50m Lakes.
 Natural Earth data are public domain: https://www.naturalearthdata.com/about/terms-of-use/.
-The embedded subset has rounded coordinates and is used only for display.
-Source: https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_50m_admin_0_countries.geojson.
+`world.json` holds their outlines with coordinates rounded to 0.01 degrees, and is used only for display.
+Boundaries are those of Natural Earth and imply no position on the status of any territory.
+Source: https://github.com/nvkelso/natural-earth-vector/tree/v5.1.2/geojson.
 
 ## Probability palette and research
 
@@ -32,12 +34,19 @@ Pillosu et al., Outrunning flash floods: XGBoost and sparse impact reports
 deliver global medium-range probabilistic forecasts of flash flood occurrence.
 https://doi.org/10.5194/egusphere-2026-1591.
 
-The research paper is CC BY 4.0. This website's generated demonstration fields
-are not extracted from the paper or produced by its fitted model. Displayed
-calibration statements are scoped to the evaluated setting described there.
+The research paper is CC BY 4.0. The fields of this website are computed with
+the model of that research from ERA5 and ERA5-ecPoint; they are not extracted
+from the paper. Displayed calibration statements are scoped to the evaluated
+setting described there.
+
+## Meteorological inputs
+
+The probability fields are derived from ERA5 and ERA5-ecPoint, and contain
+modified Copernicus Climate Change Service information. Neither the European
+Commission nor ECMWF is responsible for any use of that information.
 
 ## PoFF
 
 Copyright 2026 Fatima M. Pillosu.
 Website code: Apache License 2.0; see LICENSE.
-Generated demonstration data: CC BY 4.0; see LICENSE-DATA.
+Probability data: CC BY 4.0; see LICENSE-DATA.
