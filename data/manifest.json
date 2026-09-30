@@ -1,5 +1,5 @@
 {
- "format": 1,
+ "format": 2,
  "title": "ERA5-based historical Probability of Flash Flood (PoFF)",
  "long_name": "Probability of at least one flash flood within the grid box over 24 hours",
  "units": "%",
@@ -13,27 +13,727 @@
  "creator_url": "https://orcid.org/0000-0001-8127-0990",
  "attribution": "Flash-flood probability data: Fatima M. Pillosu / PoFF. Method: Pillosu et al. (2026), https://doi.org/10.5194/egusphere-2026-1591.",
  "grid": "grid.json",
- "encoding": {
-  "type": "uint16",
-  "byte_order": "little-endian",
-  "layout": "low bytes, then high bytes",
-  "compression": "gzip",
-  "scale": 0.01,
-  "missing": 65535
+ "land": {
+  "file": "land.bin",
+  "points": 170757,
+  "sha256": "f749ec937c333715741b5696e27c21c87a44ab2f9cd139049c419b226e858ae4"
  },
- "updated": "2026-09-29T20:40:04Z",
- "days": [
+ "encoding": {
+  "type": "sparse-year",
+  "threshold": 1.0,
+  "scale": 0.1,
+  "compression": "gzip",
+  "description": "Per day, the grid indices of the points at or above the threshold with their values in steps of the scale, and the land points without a value."
+ },
+ "days": 27363,
+ "updated": "2026-09-30T09:58:34Z",
+ "years": [
   {
-   "date": "1950-01-10",
-   "start": "1950-01-10T00:00:00Z",
-   "end": "1950-01-11T00:00:00Z",
-   "file": "maps/1950/19500110.bin",
-   "bytes": 85737,
-   "sha256": "2ac07b5a178a938eb99b0f1d46a79a95aad371b90db54bba85872f1838a604a0",
-   "points_with_values": 170757,
-   "maximum": 23.57,
-   "source": "poff_19500111_00.grib",
-   "source_sha256": "6186e1024d93c35cb4af9231c79e2135eaaaff75ba47cc7d55881e79f1f42a65"
+   "year": 1950,
+   "file": "maps/1950.bin",
+   "bytes": 3178416,
+   "sha256": "d731f3852820108768a66dc356282eca17c873940157e817a6ccec264c73ad91",
+   "days": 365,
+   "missing": [],
+   "sources": "bd735fd21097d37f4f581fbbe0c275ab4d9cfeaec1f56c80b205faa26648786d"
+  },
+  {
+   "year": 1951,
+   "file": "maps/1951.bin",
+   "bytes": 2931733,
+   "sha256": "ff0b29494b959eb28500aa6e076c27c8a956d214978e590c68039b6ebe7f6c05",
+   "days": 365,
+   "missing": [],
+   "sources": "f3e84865d4cdb44c775e22e71babd6838d13a8a134c95add9fcd5828711ec625"
+  },
+  {
+   "year": 1952,
+   "file": "maps/1952.bin",
+   "bytes": 3161001,
+   "sha256": "a99551ce6b28ce4319b20e053ba0a4b4e3f83e92b61917d83d2870569a99d455",
+   "days": 366,
+   "missing": [],
+   "sources": "79e15bc9d4974bfd2a1f66ba4d64095f7391bc5b5f0039cd066eeb41f34ee797"
+  },
+  {
+   "year": 1953,
+   "file": "maps/1953.bin",
+   "bytes": 3413009,
+   "sha256": "7a1b8554593078a1e4266dcc451e7b86edec745d6827263a87d04779360ced0e",
+   "days": 365,
+   "missing": [],
+   "sources": "b172719642a842e8711ffe0e76701d0fd4943a3e03988284863a859d418a5266"
+  },
+  {
+   "year": 1954,
+   "file": "maps/1954.bin",
+   "bytes": 3091940,
+   "sha256": "76969b407d2f3c4234885c7c0b21272b82adaf4123abb912adda8e67b7b64169",
+   "days": 365,
+   "missing": [],
+   "sources": "03f7ee9fcc14e323c10113990572ff700462b697e247f383beaf0e4c9f6e2be2"
+  },
+  {
+   "year": 1955,
+   "file": "maps/1955.bin",
+   "bytes": 3260422,
+   "sha256": "61aa3cd200c395009f60cf0f3e9697efd1a3b0af0c54e45e671c3e4e22a4f880",
+   "days": 365,
+   "missing": [],
+   "sources": "c2bbd823cb2bcbd3b9a600815ebb63551f1d9391cf2d01cdfbf78bc657203092"
+  },
+  {
+   "year": 1956,
+   "file": "maps/1956.bin",
+   "bytes": 3457880,
+   "sha256": "58bb7e75b27fde518189f1c717527184d9a242a280c4fff34db55dc6f0e1fde7",
+   "days": 366,
+   "missing": [],
+   "sources": "4ccc0a9d3b93bcdc1a388f97c88874538e15c4e08f9932b6222e76fae1b83d37"
+  },
+  {
+   "year": 1957,
+   "file": "maps/1957.bin",
+   "bytes": 3306191,
+   "sha256": "0ddbce8319b61c6a54c7b6f39407e2dfbd503b72e47db7046763acfb0dab74f9",
+   "days": 365,
+   "missing": [],
+   "sources": "756d08b18eb7b299ce2d86103456e55770594ee6a58ecd228a74de74e3169bf3"
+  },
+  {
+   "year": 1958,
+   "file": "maps/1958.bin",
+   "bytes": 3173227,
+   "sha256": "83487651ef44879c01d265f659dcfbc4389a806bbb74646a6944f3f46c8c7823",
+   "days": 365,
+   "missing": [],
+   "sources": "8f85155d58b4f4336df8489afc7ff95b7d10e59b283062a94b86c2c542ac42a6"
+  },
+  {
+   "year": 1959,
+   "file": "maps/1959.bin",
+   "bytes": 3105754,
+   "sha256": "e51cbce0fe2293d4f492675b90f8ffb1ea60997993e29ee06116ccfc4201b5ce",
+   "days": 365,
+   "missing": [],
+   "sources": "35a6c600ce576094d7d770bd9c9e95c7768c1572d42a612058428623c1c8d370"
+  },
+  {
+   "year": 1960,
+   "file": "maps/1960.bin",
+   "bytes": 3194493,
+   "sha256": "52b3916d48d9d7decc893c5996264199ded451a266156e2ce1395c55562917a3",
+   "days": 366,
+   "missing": [],
+   "sources": "05e693c2a29086027bb814ca6dd6f691cd5388c054aa11b877df1b062925ce27"
+  },
+  {
+   "year": 1961,
+   "file": "maps/1961.bin",
+   "bytes": 3039279,
+   "sha256": "452e3b22e67cd12de95a0100a954cef864ef6967e8eaf122e9de3440fabd06dd",
+   "days": 365,
+   "missing": [],
+   "sources": "973d2c22c116d3501ab814dee1642ea7a62690fbd9eb33cfa150c8056c389622"
+  },
+  {
+   "year": 1962,
+   "file": "maps/1962.bin",
+   "bytes": 3255441,
+   "sha256": "99d56fc8f0d6a5bb4eae937a707ead1675c6e5b2243e2c000a3b3804dee95afb",
+   "days": 365,
+   "missing": [],
+   "sources": "c7c54d6a47b43aa4b0469d41bc466674626c1bfe64c59559ef3a64b0b14ab6a5"
+  },
+  {
+   "year": 1963,
+   "file": "maps/1963.bin",
+   "bytes": 3096326,
+   "sha256": "30ca82ad2901d31ca9362bc7d2113e36d1ce7f264d8b00ccb5433d022734af9c",
+   "days": 365,
+   "missing": [],
+   "sources": "d653a46d8e268230f365d149b586fd91b98915258e5117be99779f28b82ef831"
+  },
+  {
+   "year": 1964,
+   "file": "maps/1964.bin",
+   "bytes": 3103991,
+   "sha256": "bfa7f72cf8e5fd3eb54e76652f71849a7b6622dcca8c7eda49805be4cc53a537",
+   "days": 366,
+   "missing": [],
+   "sources": "b139cb1494774ba4fb7c0da6e1bbd162a886365b50604d9631ffe722e7e62d41"
+  },
+  {
+   "year": 1965,
+   "file": "maps/1965.bin",
+   "bytes": 2843051,
+   "sha256": "433a505e682a9aee2533e9e3ab21b03f05e6dcfc47417ccdf169ee1df85d1b9c",
+   "days": 365,
+   "missing": [],
+   "sources": "8dad327bbd8855d011243000e6d2373fa1f56099169bd199b4803ad639c22685"
+  },
+  {
+   "year": 1966,
+   "file": "maps/1966.bin",
+   "bytes": 3030732,
+   "sha256": "4943593c8b75dd3516d244afbee5555902822dfb41a2b24e84c6c8788dcb51ab",
+   "days": 365,
+   "missing": [],
+   "sources": "49c3ce5fbd30077ce18f7587b5fe58217191a953c89a85c2e256609d9df71ec0"
+  },
+  {
+   "year": 1967,
+   "file": "maps/1967.bin",
+   "bytes": 3292961,
+   "sha256": "b3a386f339c68cb99d4210dce7b071edff05a59b28cd8af6251152c53916c0f3",
+   "days": 365,
+   "missing": [],
+   "sources": "5c296f34f6d8793265e63c509230d449f31c9fc26e8cda84254896ebae592b4d"
+  },
+  {
+   "year": 1968,
+   "file": "maps/1968.bin",
+   "bytes": 3231621,
+   "sha256": "3b87eb6f0cace1dcb6d45848e7383136b8bc17b6b8d0703024d0616d998d9e6f",
+   "days": 366,
+   "missing": [],
+   "sources": "fec2bc37953bb3da56a9aadfbda2c58d07d2911aa2524db915ff22595a47d62b"
+  },
+  {
+   "year": 1969,
+   "file": "maps/1969.bin",
+   "bytes": 3162356,
+   "sha256": "9d9b959d6b9c8f98e3942f9db5560a9ea66767ab0f1a1b199eec95bb9238431d",
+   "days": 365,
+   "missing": [],
+   "sources": "59f314a3a2cbdf8ddeb111ed0b4947992091ac8283302f82e8cbdb83c8a85c13"
+  },
+  {
+   "year": 1970,
+   "file": "maps/1970.bin",
+   "bytes": 3287079,
+   "sha256": "1bf1a35fef39f9f4ab5c81191b58c4b838dd1ab9e18bb7bdc7bcaf4c3b06b744",
+   "days": 365,
+   "missing": [],
+   "sources": "948ecfcf6f0f43a8257054be1f658710e0642880e80fdba2cddc3efd28268934"
+  },
+  {
+   "year": 1971,
+   "file": "maps/1971.bin",
+   "bytes": 3325580,
+   "sha256": "56d5e9c83d4beb3000e0a58c73833047836346c0d24b1fe3a05a36cc33461f3e",
+   "days": 365,
+   "missing": [],
+   "sources": "fdd531244632ef041a308569a91ecbf6545b9ffeeb54f29ebbcc495bb0afd091"
+  },
+  {
+   "year": 1972,
+   "file": "maps/1972.bin",
+   "bytes": 3240654,
+   "sha256": "4688a181115332fa6527c6048ae35148c8d67b3fb1a5853abdb17daf8e5391d5",
+   "days": 366,
+   "missing": [],
+   "sources": "407c88e0a200061137008ef6a01037f81e85eecb288ce56e1c1927e2360dc004"
+  },
+  {
+   "year": 1973,
+   "file": "maps/1973.bin",
+   "bytes": 3462711,
+   "sha256": "a0be9c28366c2d2be68ac34509abc0e753763405f987d4638af7766d34d66c2c",
+   "days": 365,
+   "missing": [],
+   "sources": "36d82684dde52281d9adccad594c5887cda50d08fea022ceee621b6c31646e47"
+  },
+  {
+   "year": 1974,
+   "file": "maps/1974.bin",
+   "bytes": 3562276,
+   "sha256": "37b0a43d88d17ee8e39d40585b8065059e91d7e1cbff96f9b0f6f8c0a5814a3b",
+   "days": 365,
+   "missing": [],
+   "sources": "71f1948ca9f67bc777d2971f2b27f0389e5dfe7d52aea87d7c9533d892144627"
+  },
+  {
+   "year": 1975,
+   "file": "maps/1975.bin",
+   "bytes": 3358028,
+   "sha256": "4adbd9747a3f3adc5d88233086438aa3df73e30b7caa2e0a1ea56fe0b2484781",
+   "days": 365,
+   "missing": [],
+   "sources": "537ad5601985d6355e5cc0ded69b7143f9fe689e45f4a5dff0d92c2add028127"
+  },
+  {
+   "year": 1976,
+   "file": "maps/1976.bin",
+   "bytes": 3261203,
+   "sha256": "b0eda320d155611feb8cc622dba9659a063ae6dc45f399296288b41f75fbd584",
+   "days": 366,
+   "missing": [],
+   "sources": "e0d0a4e55cf7185a0011fee3faa1a553f8cb1f43c24aa14df17580aef8fcc3bd"
+  },
+  {
+   "year": 1977,
+   "file": "maps/1977.bin",
+   "bytes": 3323450,
+   "sha256": "8055cda10ca7cbed3ec07da019d988baaab5f84d86b521b8bdd979046bcc7dd5",
+   "days": 365,
+   "missing": [],
+   "sources": "0e009fe305e5ccd52e1dd953fef7105cedd186adca63d5c78b263ed563f6b6b1"
+  },
+  {
+   "year": 1978,
+   "file": "maps/1978.bin",
+   "bytes": 3439917,
+   "sha256": "db331caf606ad7c37f4ca7e005554cc720e309a18324cf9f7f50f3c70c1f0498",
+   "days": 365,
+   "missing": [],
+   "sources": "3a459e66b279cbf77b31c89caf2d3217ce27454fff288ff57e14dc2c1864fcaa"
+  },
+  {
+   "year": 1979,
+   "file": "maps/1979.bin",
+   "bytes": 2935728,
+   "sha256": "2894936e00b91e5180a5a3e6a1879c7b20d2e021f2a4ffe2aa3a11ad80c78cb1",
+   "days": 334,
+   "missing": [
+    "1979-07-01",
+    "1979-07-02",
+    "1979-07-03",
+    "1979-07-04",
+    "1979-07-05",
+    "1979-07-06",
+    "1979-07-07",
+    "1979-07-08",
+    "1979-07-09",
+    "1979-07-10",
+    "1979-07-11",
+    "1979-07-12",
+    "1979-07-13",
+    "1979-07-14",
+    "1979-07-15",
+    "1979-07-16",
+    "1979-07-17",
+    "1979-07-18",
+    "1979-07-19",
+    "1979-07-20",
+    "1979-07-21",
+    "1979-07-22",
+    "1979-07-23",
+    "1979-07-24",
+    "1979-07-25",
+    "1979-07-26",
+    "1979-07-27",
+    "1979-07-28",
+    "1979-07-29",
+    "1979-07-30",
+    "1979-07-31"
+   ],
+   "sources": "5c7c77c9b9b56d482673584586375c8f117e8ddbd5c36ab527824cdb12bb9b48"
+  },
+  {
+   "year": 1980,
+   "file": "maps/1980.bin",
+   "bytes": 3258178,
+   "sha256": "51b09199a5624a016bea96cf45cf1f398caf931f2d5f361b173cf8b4a034b076",
+   "days": 366,
+   "missing": [],
+   "sources": "c25bea62654f027fbff1f41c6fbd922435e59cd2e6b67e3d8789bc8b4eeee2d9"
+  },
+  {
+   "year": 1981,
+   "file": "maps/1981.bin",
+   "bytes": 3315383,
+   "sha256": "504be24a8439ec8a6926a3cf9d0e3e881c5565519b8340fe702034779a557dcb",
+   "days": 365,
+   "missing": [],
+   "sources": "14d063b724790b49cd18e60ee73e2ee77cfbcaedd2d0a79545594dca13a8f502"
+  },
+  {
+   "year": 1982,
+   "file": "maps/1982.bin",
+   "bytes": 3193377,
+   "sha256": "f8294353385f946d2dffbcf6fd505010a70bbcb10a34e58962bdfe90e94fe637",
+   "days": 365,
+   "missing": [],
+   "sources": "94ab845b3350293444967d6828fa76bbcc6f530082069a1414382371a8958e38"
+  },
+  {
+   "year": 1983,
+   "file": "maps/1983.bin",
+   "bytes": 3165098,
+   "sha256": "754d63565c44766bf92bf4b311bc3939fb20bcb429907c5ff7c5875386707a32",
+   "days": 365,
+   "missing": [],
+   "sources": "ad58e33f4444bb1db24516c845b8fb60a5990939020f8254bdcc253f4d097780"
+  },
+  {
+   "year": 1984,
+   "file": "maps/1984.bin",
+   "bytes": 3404402,
+   "sha256": "5d8fdb6b01e9814ea756d0f2bf49be47302cdac6145b11f19459263e1cad95be",
+   "days": 366,
+   "missing": [],
+   "sources": "41e617907487549f8e58050a7893db964dca89a68c5e6edb507e635b47c07cb6"
+  },
+  {
+   "year": 1985,
+   "file": "maps/1985.bin",
+   "bytes": 3449428,
+   "sha256": "e303262b176676629e642cbcd7a074aa4f2948bdc6ebe4558db713cce183da4b",
+   "days": 365,
+   "missing": [],
+   "sources": "08727b4bbcebc7bedd48a959a80919a083a67c25855bf69a9bdfd89189eba54b"
+  },
+  {
+   "year": 1986,
+   "file": "maps/1986.bin",
+   "bytes": 3358637,
+   "sha256": "f43bffcbe89864c3a087b512af51ffae58e0469e4f9376155b9b434bed6efadd",
+   "days": 365,
+   "missing": [],
+   "sources": "0dd6fe352ff22f6d93cd568737b8161bc2ffdc015db3d4da609d3e04e7b90f24"
+  },
+  {
+   "year": 1987,
+   "file": "maps/1987.bin",
+   "bytes": 3184791,
+   "sha256": "207458f9af59b1a9125fd4174297b499bb67fdb5b0794bf155a1ae70aa6db79f",
+   "days": 365,
+   "missing": [],
+   "sources": "5c8bb60583f0de9fbc9a4fdbbba090ea75116c29422622cfc593b93cbe5ad0b2"
+  },
+  {
+   "year": 1988,
+   "file": "maps/1988.bin",
+   "bytes": 3489346,
+   "sha256": "c8aede7083256de2b2c2ba5c8efbe9cc81dbdcdef04650df55bc87a8f6402b5c",
+   "days": 366,
+   "missing": [],
+   "sources": "f4af5f59827428a133e63d0f9529afec339695bafeb2351883906a91a9de7e05"
+  },
+  {
+   "year": 1989,
+   "file": "maps/1989.bin",
+   "bytes": 3420937,
+   "sha256": "aa21f4faa5ac683c96dd22287aafe827cfbdc92015aa39bcf5b71cb054a7fcdd",
+   "days": 365,
+   "missing": [],
+   "sources": "eae807c993e81a4d8437af8830f5ed349de607ff724f4304b25ad0e8b0ac4c81"
+  },
+  {
+   "year": 1990,
+   "file": "maps/1990.bin",
+   "bytes": 3263803,
+   "sha256": "67d6457fa4bd63b002b681748c34645eb483f10e9f08b6baae71de018315925c",
+   "days": 365,
+   "missing": [],
+   "sources": "fa6fa14b8f0a4c76c9d562bdf131f8982a13ec43adf67de59acb4f22c8c7cc7b"
+  },
+  {
+   "year": 1991,
+   "file": "maps/1991.bin",
+   "bytes": 3357472,
+   "sha256": "dc4f62ddea786130406b924a9093afab620444b4ef266aa0b867ac2604a9cfe2",
+   "days": 365,
+   "missing": [],
+   "sources": "7ddd8eaa2ff3e7eff3b535d44be16cadd1f63678de6623217b942611c7ac7599"
+  },
+  {
+   "year": 1992,
+   "file": "maps/1992.bin",
+   "bytes": 3131377,
+   "sha256": "3cf73b2e5f389c8ad6d8f700468d0cbda9fdb6577240c8c234956202bd70c069",
+   "days": 366,
+   "missing": [],
+   "sources": "9607d14ec7dee3a357b8dd7005deae8b4c7eba3be7b3410138d1591b719e9c3a"
+  },
+  {
+   "year": 1993,
+   "file": "maps/1993.bin",
+   "bytes": 3294048,
+   "sha256": "41963815af32db07303d84311d6b4464669f395a026ce6712cc123c52ccbd0ef",
+   "days": 365,
+   "missing": [],
+   "sources": "36e479cc3bc3b15499fd395fe1c812b7edb23e99d76ba02b01cc4cef6b93ca63"
+  },
+  {
+   "year": 1994,
+   "file": "maps/1994.bin",
+   "bytes": 3394531,
+   "sha256": "8cfcf5548f69cebe51ac380d607f3069cc0ff58f752d8c412019655f6a7b3c1e",
+   "days": 365,
+   "missing": [],
+   "sources": "ba9623f0b1e61e30dc1049e911519649b169811b297bb221bb61e701ceebeb56"
+  },
+  {
+   "year": 1995,
+   "file": "maps/1995.bin",
+   "bytes": 3346064,
+   "sha256": "9faac1030fd51098d493a40751155cc8c121927e02e221220095063051ad6409",
+   "days": 365,
+   "missing": [],
+   "sources": "9064486e7ebaa34c97f157798c0f3cead95862890a56c265e52cc26e473ab1c0"
+  },
+  {
+   "year": 1996,
+   "file": "maps/1996.bin",
+   "bytes": 3393983,
+   "sha256": "0a0e0ca5315706f3ce9a99aaed7538635b3a1d914718b099f16ffd887eb9ad72",
+   "days": 366,
+   "missing": [],
+   "sources": "00b1822c4d1eca57a9c4958eaa73d54bfac6e09d4eb2997cdb572867b9e82aea"
+  },
+  {
+   "year": 1997,
+   "file": "maps/1997.bin",
+   "bytes": 3238805,
+   "sha256": "96aa450ad7c7fcde143cdee7eb8afdab550d1867a74b3bbda39246a2daa45a13",
+   "days": 365,
+   "missing": [],
+   "sources": "f592026d86e7f68aa5766be849d1176d3bea753aeec2d88790a20f6afe5c8bc8"
+  },
+  {
+   "year": 1998,
+   "file": "maps/1998.bin",
+   "bytes": 3387298,
+   "sha256": "4d8f6ca9fccc89df6abe093c2f9a4cd7baabdaf7c705c26ef7eb1dfc3a3da907",
+   "days": 365,
+   "missing": [],
+   "sources": "235dcfcc3cb01d354c14c4d9b5c0e7b7ccb59a0ed2f6f5789938d2ce53b24952"
+  },
+  {
+   "year": 1999,
+   "file": "maps/1999.bin",
+   "bytes": 3379171,
+   "sha256": "ae8d3b8bfaab463dfb78ac29e7b52435f81ff6e1232af7588d064c725683dceb",
+   "days": 365,
+   "missing": [],
+   "sources": "e5c00e2d97fb5091ce74629b2e07baa9f3cd596b2d8cfe575533edbad4dfe5ae"
+  },
+  {
+   "year": 2000,
+   "file": "maps/2000.bin",
+   "bytes": 3345887,
+   "sha256": "23b48d45891770b64d4ceb57ae93f49541dfc137077998e65df7220ba3bd2177",
+   "days": 366,
+   "missing": [],
+   "sources": "7ee7f492d35549ba2fdae34ee3cf0b2a5aa95ee5ae2c68194f88e2b8bf9f9c91"
+  },
+  {
+   "year": 2001,
+   "file": "maps/2001.bin",
+   "bytes": 3135752,
+   "sha256": "fe46bca60bd446a882c7445a6c663dcb498e4f36fac938e8b50181f708a75e78",
+   "days": 365,
+   "missing": [],
+   "sources": "aa7402d9085eeba3e61113b47bd2ca71c3d328f86bc7e137faeeabe06511d477"
+  },
+  {
+   "year": 2002,
+   "file": "maps/2002.bin",
+   "bytes": 2936483,
+   "sha256": "4a691ab2afd1a0f1f64fc2b0bfc2dc4f7d4362956841f4e56e3b51010d5aff1f",
+   "days": 365,
+   "missing": [],
+   "sources": "85c652d0b2fd381886cb72e821a53badf13521391af6ebce8a27814564cd2d96"
+  },
+  {
+   "year": 2003,
+   "file": "maps/2003.bin",
+   "bytes": 3044074,
+   "sha256": "648ddb5bb78d19a1e3c30c6fed291d32d7e831bef6ac4fc333e87bc7d5b26b73",
+   "days": 365,
+   "missing": [],
+   "sources": "76f297d05d23b3cf8c157255bfd917fa59bc44373aadac252347446f38d35245"
+  },
+  {
+   "year": 2004,
+   "file": "maps/2004.bin",
+   "bytes": 2990394,
+   "sha256": "13157c4afd4d2dd12c59b93bac243e9d44356690fad5a244071e12ed6d299980",
+   "days": 366,
+   "missing": [],
+   "sources": "5b34d4c7aa4c78a3ed9b51da9a2817cf4969c1b01214fbb340bf4c23925f3238"
+  },
+  {
+   "year": 2005,
+   "file": "maps/2005.bin",
+   "bytes": 2998290,
+   "sha256": "23abf514385168eba87955718b24bda32f8935fa0ed0ec451b81cb417fce9afe",
+   "days": 365,
+   "missing": [],
+   "sources": "04cff6f95b4dbe37bf3ea5bef3f412c1e328b1a9ac5d710b9dde22d4924f6477"
+  },
+  {
+   "year": 2006,
+   "file": "maps/2006.bin",
+   "bytes": 3184971,
+   "sha256": "d87e539a6938cd65e3ba72b4b293fb71152b36607786abb9a7cbd84af593c06b",
+   "days": 365,
+   "missing": [],
+   "sources": "5ffd5c85e5faca6c314c710430ac7a596af6a368d3eafa6b754c7b3a2f557631"
+  },
+  {
+   "year": 2007,
+   "file": "maps/2007.bin",
+   "bytes": 3194852,
+   "sha256": "28d81abbaae673031b9e6c790565176e109a6bba9c5079a0b6f762e4ffb667f2",
+   "days": 365,
+   "missing": [],
+   "sources": "fd6e3f8357a77041df2679762e528975ceec2eeb51097e551262f5ffb9b940f9"
+  },
+  {
+   "year": 2008,
+   "file": "maps/2008.bin",
+   "bytes": 3267402,
+   "sha256": "e489d133b9233703b8028d3f54d08eb707cee45359617408e68adc76752dbcd6",
+   "days": 366,
+   "missing": [],
+   "sources": "4f595e949ba49442cb34936ac566ff364c4795796095cd313eb06e3fe469edeb"
+  },
+  {
+   "year": 2009,
+   "file": "maps/2009.bin",
+   "bytes": 3116194,
+   "sha256": "ab2447c45904d027af84dfcc561e212defe13686467cf7f03b04be7710f8cf3e",
+   "days": 365,
+   "missing": [],
+   "sources": "98a510406ea63ce5c38d5de2e6a080cfd25024c31c0b8ea52be924d12f2123e7"
+  },
+  {
+   "year": 2010,
+   "file": "maps/2010.bin",
+   "bytes": 3254079,
+   "sha256": "45d5fd3ea07299c40c9643e0992252a382b1fc689086206fc68e8a5c75f5754e",
+   "days": 365,
+   "missing": [],
+   "sources": "0afaab2134fe64195b7b0be082ef5314fef4cb73a234bea6c6560ce5a041bd07"
+  },
+  {
+   "year": 2011,
+   "file": "maps/2011.bin",
+   "bytes": 3253093,
+   "sha256": "7b6d8765e4e61bdc6ba24ed4ff2713642acd101028917a372505fa872294171a",
+   "days": 365,
+   "missing": [],
+   "sources": "2f76a7cea9169e0c390e054e6a9ee33277adb17b94c75f634317a81236b94fad"
+  },
+  {
+   "year": 2012,
+   "file": "maps/2012.bin",
+   "bytes": 3089137,
+   "sha256": "dca56d8aa8e52f418b20b46c9aa6bd99f5fe90f729751655b82cfb09b6b9e6ac",
+   "days": 366,
+   "missing": [],
+   "sources": "beb35cb7a7b5a63f6ec3354b843028b4894452c4d822ee045dbd898a41332561"
+  },
+  {
+   "year": 2013,
+   "file": "maps/2013.bin",
+   "bytes": 3209821,
+   "sha256": "b7631dcbb8e4e5d57de46302e1ec983dd8683637ebcf058809431a190bea992e",
+   "days": 365,
+   "missing": [],
+   "sources": "28faf4ab04309476119fe6a687e2cabff0599ecac3557ddc301cc27edb2699b8"
+  },
+  {
+   "year": 2014,
+   "file": "maps/2014.bin",
+   "bytes": 3072084,
+   "sha256": "124bbcaa4e1a3ee17c728f4d81810e199fa5dcf272b747402b5f03d2ffdc102b",
+   "days": 365,
+   "missing": [],
+   "sources": "b64cb67850b519a67df2158871ec8ea608ecd93481a569a2ee73a6de8ede3656"
+  },
+  {
+   "year": 2015,
+   "file": "maps/2015.bin",
+   "bytes": 2891335,
+   "sha256": "dade68cefaf8b2bcffaf982a4556a02de0719c3f8fcc15533275469da6a24531",
+   "days": 365,
+   "missing": [],
+   "sources": "a3f4cee9f911d5447c8a2160410c0fc3cd58a02571cc3ab890e299d7e69cd201"
+  },
+  {
+   "year": 2016,
+   "file": "maps/2016.bin",
+   "bytes": 3191621,
+   "sha256": "b5d20c7c6b5062c3a06792fa25dfa580f1268413d0e13c17d20702a77023f181",
+   "days": 366,
+   "missing": [],
+   "sources": "ae77eb53bf9fa21e0a7c2b0c425bd2d5a5929095a3a9910262ff93c847c0f343"
+  },
+  {
+   "year": 2017,
+   "file": "maps/2017.bin",
+   "bytes": 3226918,
+   "sha256": "a9a5c851de8ef11bdf44e162f33f56a1ba52147ce8487ccfe96ace5d4cf01eee",
+   "days": 365,
+   "missing": [],
+   "sources": "49d8a53fe914c37116c990396ef0f66b8bf5fadff3de78d7b2c98b6c2c387cdf"
+  },
+  {
+   "year": 2018,
+   "file": "maps/2018.bin",
+   "bytes": 3151984,
+   "sha256": "3255ddb03cf8923990e87d09beeff0b0f95aeb795be14d463fa99411ad0bb85b",
+   "days": 365,
+   "missing": [],
+   "sources": "24e68f6cd7490ffcca43ff1fc43b0e937694641bca666075bc13044ec14f517f"
+  },
+  {
+   "year": 2019,
+   "file": "maps/2019.bin",
+   "bytes": 3103675,
+   "sha256": "661a41aaafaa6c80c833d15214b9173d8ba3c601a89c62611ef92f3d54b96f20",
+   "days": 365,
+   "missing": [],
+   "sources": "67f0ba1897f3b7953097b42b0ef0fecb618d484add5d9900e8f84bf9d537e1af"
+  },
+  {
+   "year": 2020,
+   "file": "maps/2020.bin",
+   "bytes": 3159787,
+   "sha256": "fb067e8a1eec6758eb67e6105d0437d5f59f89098d6091612c85260ce879db5a",
+   "days": 366,
+   "missing": [],
+   "sources": "0a05f011de5ef67f9e67b216cb51aa069e8d7a71ee016e4b0a7c5461d9b98f28"
+  },
+  {
+   "year": 2021,
+   "file": "maps/2021.bin",
+   "bytes": 3121518,
+   "sha256": "046cd8a5fa05f414104d20c20d675c3a0fbdf67e4f51549015476e0d8a7eadce",
+   "days": 365,
+   "missing": [],
+   "sources": "b7a1589197a905c5af640971542dd356e2f8bb506ae9328bcd711c5335c41d9a"
+  },
+  {
+   "year": 2022,
+   "file": "maps/2022.bin",
+   "bytes": 3154204,
+   "sha256": "0bc2b3dad056f834d5fe162c3b3e7cde9654b2215fe55f81292a8096d16e71cb",
+   "days": 365,
+   "missing": [],
+   "sources": "c9d62fb337fa57a65e1321c00fb302f7840cfcfd64334d566e408481457d9272"
+  },
+  {
+   "year": 2023,
+   "file": "maps/2023.bin",
+   "bytes": 1153437,
+   "sha256": "f2dbd612b7d18073925ad126299b8a25f018a982b29aa9585d2fd2467af07c51",
+   "days": 365,
+   "missing": [],
+   "sources": "66ddae88f8e631e4c68cdc270f9306f8b65215977ef4f3b40d0be7d7a26bfa27"
+  },
+  {
+   "year": 2024,
+   "file": "maps/2024.bin",
+   "bytes": 2597092,
+   "sha256": "51deb1f4e5d8e69f85d43e7b12722853df3b4b7c3c33104a7155efe6c3b523e1",
+   "days": 366,
+   "missing": [],
+   "sources": "b02d3fe9cda2e90bbded92024b44739fa26316dfa2491b14433252bb1432f463"
   }
  ]
 }
