@@ -2,10 +2,10 @@
 
 <p><img src="https://raw.githubusercontent.com/FatimaPillosu/probability_flash_flood/main/poff-logo.png" alt="Probability of Flash Flood (PoFF)" width="640"></p>
 
-A static, map-led archive explorer for PoFF. This first release uses a
-deterministic synthetic dataset to demonstrate the interface. It is not model
-output or observed historical flood occurrence. The interface uses a discreet
-Demonstration notice; downloaded files retain demonstration provenance.
+A static, map-led explorer of the historical PoFF archive. The page shows the
+days that `data/manifest.json` lists, on the native grid of the archive. It is
+a preview: one day, 10 January 1950, is published. Location profiles,
+climatology and data downloads return when their data are published.
 
 ## Run locally
 
@@ -16,72 +16,105 @@ python -m http.server 8765
 ```
 
 Open http://localhost:8765. No package installation or build is required.
+The page must be served: a browser does not read the data from a page opened
+as a file.
 
 ## Files
 
 - `index.html`: semantic page structure and metadata.
 - `poff-logo.png`: approved teal logo, shared with the scientific repository.
 - `atlas.css`: Atlas layout, responsive styles and appearance.
-- `atlas.js`: data generation, map projection, place lookup, charts, statistics,
-  context overlays, state persistence and exports.
+- `atlas.js`: archive reader, map, place lookup, charts, statistics, state
+  persistence and exports.
 - `d3.min.js`: locally bundled D3 7.9.0.
+- `world.json`: coastlines, country boundaries and lakes from Natural Earth.
+- `data/manifest.json`: the published days, their encoding and provenance.
+- `data/grid.json`: the reduced Gaussian grid of the fields.
+- `data/maps/YYYY/YYYYMMDD.bin`: one field per day, named after the start of
+  its 24-hour period.
 - `.nojekyll`: serves the files directly on GitHub Pages.
 - `LICENSE`, `LICENSE-DATA`, `THIRD_PARTY_NOTICES.md`: licensing and attribution.
 
-All asset URLs are relative, so the site works at a GitHub Pages project URL.
-It makes no data-service requests. External links open the paper or a Google
+All URLs are relative, so the site works at a GitHub Pages project URL. The
+page requests its own files only. External links open the paper or a Google
 search; user selections are stored only in the visitor's browser.
 
 ## Implemented experience
 
-- Daily probability maps and a year player for 2018–2020.
-- Monthly and annual reference maps for 1991–2020.
-- Name suggestions with region/country; latitude/longitude selection.
-- Map values shown only after a map click.
-- Requested point and sampled grid centre, daily series, thresholds,
-  monthly/year means, peaks, exceedance counts, coverage and anomalies.
-- Paper-backed skill information and selected-data quality.
+- A global map of the daily probability, in the paper's intervals and colours.
+- Pan by dragging; zoom with the buttons, or with Ctrl or ⌘ and the wheel.
+- Place name or latitude/longitude selection, which brings the place into view.
+- The value of a grid box after a map click, with the centre of the box.
+- Paper-backed skill information, and the credit of the data.
 - Google media searches with date-window controls.
-- Demonstration population, settlement, infrastructure and economic overlays.
-- PNG map, daily CSV/NetCDF and annual/monthly statistics CSV downloads.
+- PNG map download, with date, legend and credit.
 
-The reference averages all calendar days across thirty separately generated
-years, rather than relabelling a single-year average. Anomalies are percentage
-point differences. Missing coverage is distinct from a zero probability.
+The year player appears when a year has more than one published day. The
+location profile, the monthly and annual climatology and the CSV and NetCDF
+downloads are in the code but hidden: they need daily series and a reference
+period, which the manifest does not list yet.
 
-## Scope of the data
+## The map and the data
 
-Probability coverage is an illustrative 0.25-degree Iberian grid. The built-in
-gazetteer contains a small city list, including two disambiguated Valencias;
-it is not a global geocoder. The exposure overlays are generated interface
-examples, not GHSL, OSM or measured GDP data. Asset positions are illustrative
-and must not be used to locate actual facilities. The skill panel reports the
-paper's evidence without inventing numerical verification curves.
+The fields are on the ERA5 N320 reduced Gaussian grid, about 31 km. The map
+is a plate carrée. Each pixel takes the colour of the grid box that contains
+it: values are not interpolated, and the value shown after a click is the
+value of that box. Values are rounded to 0.01 percentage points.
 
-## Connect production data
+White is a probability below 1%. Hatched land has no value in the archive.
+The field stops at the coastline, so the sea part of a coastal grid box is
+not coloured. Lakes are drawn as water where the archive has no value.
 
-Replace the generated `cells` and calendar series in `atlas.js` with a versioned
-catalogue/data adapter. Preserve native grid identifiers and requested/sampled
-coordinates. Deliver map tiles separately from numerical point series; never
-infer values from map colours. Keep the probability palette and documented UTC
-accumulation bounds. Supply real baseline coverage, missing-value masks,
-provenance and verification tables. Replace the small gazetteer and generated
-context overlays with appropriately licensed sources.
+The built-in gazetteer contains a small city list, including two
+disambiguated Valencias; it is not a global geocoder. Coordinates work
+everywhere.
 
-Full global archives should be served from separate HTTPS storage. GitHub Pages
-hosts the interface. Arbitrary large NetCDF subsets would need prepared chunks
-or an external service; selected-point exports can be made in the browser.
+## Add days to the archive
+
+`poff_web.py`, kept with the ecFlow suite that computes the archive and not
+in this repository, converts its GRIB outputs. Dates are START dates of the
+24-hour period:
+
+```sh
+python3 suite/bin/poff_web.py maps --config suite/build/poff.json --site data 1950-01-10
+python3 suite/bin/poff_web.py check --config suite/build/poff.json --site data
+```
+
+`maps` checks each GRIB file against its provenance record, writes the web
+file and lists it in the manifest. It refuses outputs of another model or
+run, and does not replace a published day unless `--overwrite` is given.
+`check` compares every published file with the manifest and with its GRIB
+output. The page needs no change when days are added.
+
+One day takes about 85 kB. GitHub Pages limits a site to 1 GB, which is less
+than the full archive in this form needs.
+
+`world.json` is made from Natural Earth 5.1.2:
+
+```sh
+python3 suite/bin/poff_web.py geography --version 5.1.2 \
+    --countries ne_50m_admin_0_countries.geojson --lakes ne_50m_lakes.geojson world.json
+```
+
+## Test
+
+The tests of the converter are kept with it. The last of them opens the page
+in Chrome, selects 240 points through the coordinate form, and compares the
+grid box, value, text and colour that the page shows with the GRIB output
+read by ecCodes.
 
 ## Publication
 
 Publish this directory's reviewed files at the root of the repository's
 `website` branch, then configure GitHub Pages to deploy from that branch's root.
 The scientific software remains on `main`. No credentials or private workflow
-files belong in this branch. The page is marked `noindex` while it remains a
-demonstration; remove that tag when a validated production archive is connected.
+files belong in this branch. The page is marked `noindex` and labelled Preview
+while the archive is incomplete; remove both when a validated archive is connected.
 
 ## Licences
 
-Website code: Apache-2.0. Generated demonstration data: CC BY 4.0.
+Website code: Apache-2.0. Probability data: CC BY 4.0.
+The data are derived from ERA5 and ERA5-ecPoint, and contain modified
+Copernicus Climate Change Service information.
 Third-party components retain their own terms; see THIRD_PARTY_NOTICES.md.
 Research: https://doi.org/10.5194/egusphere-2026-1591.

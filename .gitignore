@@ -7,6 +7,9 @@
 !/atlas.css
 !/atlas.js
 !/d3.min.js
+!/world.json
+!/data/
+!/data/**
 !/README.md
 !/LICENSE
 !/LICENSE-DATA

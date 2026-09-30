@@ -1,0 +1,39 @@
+{
+ "format": 1,
+ "title": "ERA5-based historical Probability of Flash Flood (PoFF)",
+ "long_name": "Probability of at least one flash flood within the grid box over 24 hours",
+ "units": "%",
+ "comment": "Ocean and missing-rainfall points are missing; dry land is zero.",
+ "model_label": "XGBoost BCE AUC-ROC full CONUS",
+ "model_sha256": "aeb4544ac4770ff5f351c4374ed9a656e6092f892232c6376194ef7f4aab68c0",
+ "run_sha256": "377f4696623d25d4b059186c1d2e42fcc5e0966d828941498e5e859edcfde40b",
+ "references": "https://doi.org/10.5194/egusphere-2026-1591",
+ "license": "https://creativecommons.org/licenses/by/4.0/",
+ "creator_name": "Fatima M. Pillosu",
+ "creator_url": "https://orcid.org/0000-0001-8127-0990",
+ "attribution": "Flash-flood probability data: Fatima M. Pillosu / PoFF. Method: Pillosu et al. (2026), https://doi.org/10.5194/egusphere-2026-1591.",
+ "grid": "grid.json",
+ "encoding": {
+  "type": "uint16",
+  "byte_order": "little-endian",
+  "layout": "low bytes, then high bytes",
+  "compression": "gzip",
+  "scale": 0.01,
+  "missing": 65535
+ },
+ "updated": "2026-09-29T20:40:04Z",
+ "days": [
+  {
+   "date": "1950-01-10",
+   "start": "1950-01-10T00:00:00Z",
+   "end": "1950-01-11T00:00:00Z",
+   "file": "maps/1950/19500110.bin",
+   "bytes": 85737,
+   "sha256": "2ac07b5a178a938eb99b0f1d46a79a95aad371b90db54bba85872f1838a604a0",
+   "points_with_values": 170757,
+   "maximum": 23.57,
+   "source": "poff_19500111_00.grib",
+   "source_sha256": "6186e1024d93c35cb4af9231c79e2135eaaaff75ba47cc7d55881e79f1f42a65"
+  }
+ ]
+}
